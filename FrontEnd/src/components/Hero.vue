@@ -7,12 +7,12 @@ export default {
 <template>
   <div class="main">
     <div class="flex justify-center mt-20">
-      <h1 class="text-8xl text-white font-Oi drop-shadow-xl">ZipLink</h1>
+      <h1 class="text-9xl text-white font-Oi drop-shadow-xl">ZipLink</h1>
     </div>
     <div class="flex justify-center gap-14 mt-10">
-      <h4 class="text-xl font-medium text-white font-Dela">Shorten</h4>
-      <h4 class="text-xl font-medium text-white font-Dela">Share</h4>
-      <h4 class="text-xl font-medium text-white font-Dela">Simplify</h4>
+      <h4 class="text-2xl font-medium text-white font-Dela">Shorten</h4>
+      <h4 class="text-2xl font-medium text-white font-Dela">Share</h4>
+      <h4 class="text-2xl font-medium text-white font-Dela">Simplify</h4>
     </div>
     <div class="flex justify-center mt-20">
       <div class="relative mt-8">
