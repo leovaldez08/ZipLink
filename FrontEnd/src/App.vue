@@ -1,10 +1,14 @@
 <script setup>
 import Hero from "./components/Hero.vue";
+import Result from "./components/Result.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
   <div>
     <Hero />
+    <Result />
+    <Footer />
   </div>
 </template>
 
