@@ -1,7 +1,25 @@
 <script>
-export default {
-  name: "Result",
-};
+import { defineComponent, ref } from "vue";
+import useClipboard from "vue-clipboard3";
+
+export default defineComponent({
+  setup() {
+    const { toClipboard } = useClipboard();
+    const text = ref("https://ziplink.com/bada55");
+
+    const copyToClipboard = async () => {
+      if (text.value.trim() !== "") {
+        try {
+          await toClipboard(text.value);
+        } catch (e) {
+          console.error(e);
+        }
+      }
+    };
+
+    return { copyToClipboard, text };
+  },
+});
 </script>
 
 <template>
@@ -13,11 +31,14 @@ export default {
       <div class="flex justify-center">
         <div class="relative mt-8">
           <input
+            v-model="text"
             type="text"
-            class="w-100 h-10 rounded-full font-medium text-xl outline outline-4 outline-black p-4"
+            readonly
+            class="w-100 h-10 rounded-full font-medium text-lg outline outline-4 outline-black p-4"
           />
           <button
             class="absolute right-0 top-0 w-10 h-10 flex justify-center items-center rounded-full bg-black text-xl font-medium font-Dela text-white outline outline-4 outline-black"
+            @click="copyToClipboard"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
