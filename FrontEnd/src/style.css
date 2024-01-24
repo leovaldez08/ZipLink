@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Dela Gothic One";
+  src: url("./Fonts/DelaGothicOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Oi-Regular";
+  src: url("./Fonts/Oi-Regular.ttf");
+}
